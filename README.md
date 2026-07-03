@@ -38,7 +38,7 @@ Run `./slackology.sh --help` for the full list of options (custom repo URL, para
 | File | Purpose |
 |------|---------|
 | `slackology.sh` | The main script. |
-| `repologyNames.map` | Maps Slackware package names to Repology project names (e.g. `mozilla-firefox` → `firefox`). Case and `_`/`-` differences are normalized automatically, so only genuine renames need entries. Auto-detected next to the script; override with `-R`. |
+| `repologyNames.map` | Maps Slackware package names to Repology project names (e.g. `gcc-g++` → `gcc`). Case and `_`/`-` differences are normalized automatically, so only genuine renames need entries. Auto-detected next to the script; override with `-R`. |
 | `upstreamLinks.tsv` | TSV of `package<TAB>upstream_url`, used by `--build` to locate each package's upstream source. Auto-detected next to the script; override with `-U`. |
 
 ## Notes

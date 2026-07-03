@@ -18,7 +18,8 @@ clearCache=false
 buildEnabled=false
 onlyPackages=()
 installedOnly=false
-pkgDbDir="/var/log/packages"
+pkgDbDir="/var/lib/pkgtools/packages"
+[ -d "$pkgDbDir" ] || pkgDbDir="/var/log/packages"
 sourceDir="$scriptDir/source"
 upstreamFile=""
 upstreamFileSet=false
@@ -246,7 +247,7 @@ addPackage() {
 
 if [ "$installedOnly" = true ]; then
 	if [ ! -d "$pkgDbDir" ]; then
-		echo "Error: package database directory not found: $pkgDbDir" >&2
+		echo "Error: package database directory not found (tried /var/lib/pkgtools/packages and /var/log/packages)" >&2
 		exit 1
 	fi
 

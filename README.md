@@ -25,7 +25,7 @@ Repology lookups are cached for 24 hours under `~/.cache/slackology` to keep rep
 ./slackology.sh --installed
 
 # Check a single package
-./slackology.sh -p mozilla-firefox
+./slackology.sh -p glibc
 
 # Fetch latest sources and rebuild outdated packages from a local source tree
 ./slackology.sh --build --source-dir /path/to/source
